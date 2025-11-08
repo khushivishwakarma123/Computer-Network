@@ -1,0 +1,104 @@
+:root {
+  --bg: #0f2027;
+  --text: #fff;
+  --accent: #00ffcc;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  margin: 0;
+  transition: 0.5s ease-in-out;
+}
+
+header {
+  text-align: center;
+  padding: 2rem;
+  background: linear-gradient(90deg, #203a43, #2c5364);
+  box-shadow: 0 0 15px rgba(0,0,0,0.4);
+}
+
+button {
+  background: var(--accent);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+main {
+  padding: 1rem;
+}
+
+.post {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: rgba(255,255,255,0.05);
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,255,204,0.3);
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease-in-out;
+}
+
+.post.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+ul {
+  text-align: left;
+}
+
+.animation {
+  margin-top: 20px;
+  height: 100px;
+  border-radius: 10px;
+}
+
+.app-anim {
+  background: linear-gradient(90deg, #ff9a9e, #fad0c4);
+  animation: moveData 3s infinite alternate;
+}
+.transport-anim {
+  background: linear-gradient(90deg, #a1c4fd, #c2e9fb);
+  animation: moveData 4s infinite alternate;
+}
+.network-anim {
+  background: linear-gradient(90deg, #fbc2eb, #a6c1ee);
+  animation: moveData 5s infinite alternate;
+}
+.datalink-anim {
+  background: linear-gradient(90deg, #89f7fe, #66a6ff);
+  animation: moveData 6s infinite alternate;
+}
+.physical-anim {
+  background: linear-gradient(90deg, #85d461, #66a6ff);
+  animation: moveData 7s infinite alternate;
+}
+@keyframes moveData {
+  from { transform: translateX(0); }
+  to { transform: translateX(60px); }
+}
+
+.diagram {
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 1rem;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: rgba(247, 230, 243, 0.05);
+}
+
+/* LIGHT MODE */
+body.light {
+  --bg: #fafafa;
+  --text: #111;
+  --accent: #0077ff;
+}
