@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TCP/IP Explained: The Internet’s Hidden Language</title>
+  <link rel="stylesheet" href="style3.css" />
+</head>
+<body>
+
+  <header>
+    <h1>🌐 TCP/IP Protocol Suite</h1>
+    <p>Understand how data travels across the Internet — Layer by Layer</p>
+    <button id="themeToggle">🌙 Toggle Theme</button>
+  </header>
+
+  <main>
+    <!-- INTRO SECTION -->
+    <section class="post visible intro">
+      <h2>Introduction to TCP/IP</h2>
+      <p>
+        The TCP/IP Protocol Suite is the foundation of the Internet. It defines how data is packaged, addressed, transmitted, routed, and received. 
+        TCP/IP stands for <strong>Transmission Control Protocol / Internet Protocol</strong>, and it organizes communication into 4 layers:
+      </p>
+      <ul>
+        <li>1️ Application Layer</li>
+        <li>2️ Transport Layer</li>
+        <li>3️ Network Layer</li>
+        <li>4️ Data Link Layer</li>
+        <li>5 Physical Layer</li>
+        <img src="https://miro.medium.com/1*G6lQ90SrFLHiT0GIlr1qtA.png" alt="Transmission Control Protocol" width="600" height="400">
+      </ul>
+    </section>
+
+    <!-- APPLICATION LAYER -->
+    <section class="post" id="application">
+      <h2>1️ Application Layer</h2>
+      <p>
+        The Application Layer provides network services directly to end-user applications.
+        It defines protocols for web browsing, file transfer, and email.  
+      </p>
+       <h3>Key Functions</h3>
+      <ul>
+        <li><strong>User Interface for Network Services</strong> access for users and applications.</li>
+        <li><strong>Data Formatting and Encoding:</strong> Prepares data for transmission and displays received data.</li>
+        <li><strong>Session Management:</strong> Maintains sessions between communicating devices.</li>
+        <li><strong>Authentication and Security:</strong> Ensures secure data access (e.g., HTTPS).</li>
+        <h3>Common Protocol</h3>
+        <li><strong>HTTP/HTTPS</strong> – Web browsing</li>
+        <li><strong>FTP</strong> – File transfer</li>
+        <li><strong>SMTP/POP3</strong> – Email</li>
+        <li><strong>DNS</strong> – Domain name resolution</li>
+        <li><strong>DHCP</strong> – Dynamic IP addressing</li>
+      </ul>
+      <p><em>Analogy:</em> It’s like the app you use — web browser, email client, or chat — where communication begins.</p>
+      <div class="animation app-anim"></div>
+    </section>
+
+    <!-- TRANSPORT LAYER -->
+    <section class="post" id="transport">
+      <h2>2️ Transport Layer</h2>
+      <p>
+        The Transport Layer ensures reliable delivery of data between applications.
+        It’s responsible for breaking large messages into smaller segments, managing flow control, and verifying successful delivery.
+      </p>
+      <h3>Key Functions</h3>
+      <ul>
+        <li><strong>Segmentation</strong> Breaks data into smaller parts called segments.</li>
+        <li><strong>Flow Control</strong> Prevents congestion by managing data rate.</li>
+        <li><strong>Error Detection and Recovery</strong> Retransmits lost or corrupted data.</li>
+        <li><strong>Connection Management</strong> Establishes, maintains, and terminates connections</li>
+        <h3>Common Protocol</h3>
+        <li><strong>TCP (Transmission Control Protocol)</strong> – Reliable, connection-oriented communication.</li>
+        <li><strong>UDP (User Datagram Protocol)</strong> – Faster, connectionless communication.</li>
+      </ul>
+      <p><em>Analogy:</em> It’s like the postal system ensuring your letters are delivered in order, or like streaming where delivery is fast but not guaranteed.</p>
+      <div class="animation transport-anim"></div>
+    </section>
+
+    <!-- NETWORK LAYER -->
+    <section class="post" id="network">
+      <h2>3️ Network Layer</h2>
+      <p>
+        The Internet Layer defines the path that data takes through the network. 
+        It provides logical addressing (IP addresses) and determines how data packets are routed.
+      </p>
+      <h3>Key Functions </h3>
+      <ul>
+     <li><strong> Addressing</strong> Uses IP addresses to identify source and destination devices.</li>
+      <li><strong>Routing</strong> the best path for data through the network.</li>
+      <li><strong>Packet Fragmentation and Reassembly</strong> large packets into smaller ones for transmission.</li>
+       <li><strong>Error Handling</strong> Manages unreachable hosts or routing failures.</li>
+        <h3>Common Protocol</h3>
+        <li><strong>IP (Internet Protocol)</strong> – Logical addressing and routing.</li>
+        <li><strong>ICMP</strong> – Error and diagnostic reporting (used in ping).</li>
+        <li><strong>ARP</strong> – Resolves IP addresses to MAC addresses.</li>
+        <li><strong>RARP</strong> – Converts MAC addresses to IP addresses.</li>
+      </ul>
+      <p><em>Analogy:</em> It’s like the GPS of the Internet, finding the best route for your data to travel.</p>
+      <div class="animation network-anim"></div>
+    </section>
+
+    <!-- DATALINK LAYER -->
+    <section class="post" id="datalink">
+      <h2>4️ Data Link Layer</h2>
+      <p>
+        The Data Link Layer (part of TCP/IP’s Network Access layer) handles node-to-node communication — making sure data is correctly sent between directly connected devices on the same network.
+        It packages data into frames and adds MAC (Media Access Control) addresses for device identification.
+      </p>
+      <h3>🔌 Key Functions</h3>
+      <ul>
+      <li><strong> Framing</strong> Divides data into manageable units called frames.</li>
+      <li><strong> MAC Addressing</strong> Identifies devices physically connected to the network.</li>
+      <li><strong> Error Detection and Correction</strong> Detects errors using CRC (Cyclic Redundancy Check).</li>
+      <li><strong> Flow Control</strong> Regulates data transmission between fast and slow devices.</li>
+        <li><strong> Access Control</strong> Manages which device can transmit at a given time.</li>
+            <h3>Common Protocol</h3>
+        <li><strong>Ethernet</strong> – Wired LAN communication.</li>
+        <li><strong>Wi-Fi (IEEE 802.11)</strong> – Wireless transmission.</li>
+        <li><strong>PPP (Point-to-Point Protocol)</strong> – Direct connections between two devices.</li>
+      </ul>
+      <p><em>Analogy:</em> It’s like the roads, wires, and physical infrastructure that move data around.</p>
+      <div class="animation datalink-anim"></div>
+    </section>
+    <!-- PHYSICAL LAYER -->
+<section class="post" id="physical">
+  <h2>5️⃣ Physical Layer</h2>
+  <p>
+    The Physical Layer is the foundation of all network communication. It defines how raw bits (0s and 1s) are physically transmitted between devices over a medium like copper wire, fiber optics, or wireless signals.
+  </p>
+
+  <h3> Key Functions</h3>
+  <ul>
+    <li><strong>Transmission Medium</strong> – Defines the actual hardware used for data transfer (e.g., cables, fiber, radio waves).</li>
+    <li><strong>Signal Encoding</strong> – Converts binary data into electrical, optical, or radio signals.</li>
+    <li><strong>Bit Synchronization</strong> – Ensures the sender and receiver stay in sync for proper bit interpretation.</li>
+    <li><strong>Data Rate Control</strong> – Determines how many bits per second can be transmitted.</li>
+    <li><strong>Physical Topology</strong> – Defines how devices are connected (bus, star, ring, mesh, etc.).</li>
+  </ul>
+
+  <h3> Common Devices</h3>
+  <ul>
+    <li>Cables (Ethernet, Fiber, Coaxial)</li>
+    <li>Hubs & Repeaters</li>
+    <li>Network Interface Cards (NICs)</li>
+    <li>Switches (at the physical level)</li>
+    <img src="https://miro.medium.com/v2/resize:fit:1296/0*JECfMUdW4PT7pf0a.png" alt="Protocols" width="700" height="400">
+  </ul>
+
+  <div class="animation physical-anim"></div>
+</section>
+
+
+
+    <!-- SUMMARY -->
+    <section class="post" id="summary">
+      <h2>📦 Data Encapsulation in TCP/IP</h2>
+      <p>
+        When data moves down the TCP/IP layers, each layer adds its own header information — a process called <strong>encapsulation</strong>.
+        At the destination, the process reverses (decapsulation).
+      </p>
+      
+      <p>
+        <strong>Order of data flow (Sender → Receiver):</strong><br>
+        Application → Transport → Internet → Network Access → Physical -> Transmission → Physical -> Network Access → Internet → Transport → Application
+      </p>
+      <a href="https://www.geeksforgeeks.org/computer-networks/tcp-ip-model/">Click For More Information About TCP/IT Protocol Suite</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>Thank you for visiting my TCP/IP Protocol Suite project!</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
